@@ -1,7 +1,7 @@
 // routes/auth.js
 import express from "express";
 import { body, validationResult } from "express-validator";
-import User from "../models/User.js"; // Ensure file name/case matches exactly
+import User from "../models/user.js"; // Ensure file name/case matches exactly
 
 const router = express.Router();
 
