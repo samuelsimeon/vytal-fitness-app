@@ -38,7 +38,7 @@ app.use(express.json());
 // Configure CORS to allow credentials and set the correct origin
 app.use(
   cors({
-    origin: "http://localhost:5173", // Change this if your client runs on a different URL
+    origin: "http://localhost:5174", // Change this if your client runs on a different URL
     credentials: true,
   })
 );
