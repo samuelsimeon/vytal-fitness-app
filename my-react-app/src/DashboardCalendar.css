@@ -1,0 +1,82 @@
+/* DashboardCalendar.css - Customize ONLY the Dashboard Calendar */
+
+/* Calendar Container */
+.dashboard-calendar {
+    background: #ff4500;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title */
+  .dashboard-calendar h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  /* React-Calendar Base Styles */
+  .dashboard-calendar .react-calendar {
+    width: 100%;
+    max-width: 250px;
+    background: black;
+    border-radius: 10px;
+    padding: 1rem;
+    border: none;
+    color: white;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  /* Month Title */
+  .dashboard-calendar .react-calendar__navigation {
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+  
+  /* Month Change Buttons */
+  .dashboard-calendar .react-calendar__navigation button {
+    color: white;
+    background: transparent;
+    font-size: 1.2rem;
+  }
+  
+  .dashboard-calendar .react-calendar__navigation button:hover {
+    color: #ff4500;
+  }
+  
+  /* Weekday Headers */
+  .dashboard-calendar .react-calendar__month-view__weekdays {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: white;
+  }
+  
+  /* Day Cells */
+  .dashboard-calendar .react-calendar__tile {
+    background: transparent;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s;
+  }
+  
+  /* Hover & Selected Effect */
+  .dashboard-calendar .react-calendar__tile:hover {
+    background: rgba(255, 69, 0, 0.5);
+  }
+  
+  .dashboard-calendar .react-calendar__tile--active {
+    background: #ff4500;
+    color: white;
+  }
+  
+  /* Remove Border Around Calendar */
+  .dashboard-calendar .react-calendar,
+  .dashboard-calendar .react-calendar__tile:focus {
+    outline: none;
+  }
+  

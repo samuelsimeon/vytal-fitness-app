@@ -1,0 +1,153 @@
+/* ===== CSS Styling ===== */
+.workout-dictionary {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #0a0814;
+    color: white;
+  }
+  
+.muscle-map-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .muscle-map {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .muscle-area {
+    position: absolute;
+    cursor: pointer;
+    background: rgba(255, 69, 0, 0.3);
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .muscle-area:hover {
+    background: rgba(255, 69, 0, 0.5);
+  }
+  
+  /* Positioning Clickable Areas*/ 
+  .chest { top: 30%; left: 50%; width: 10%; height: 10%; transform: translate(-50%, -50%); }
+  .back { top: 35%; left: 50%; width: 12%; height: 12%; transform: translate(-50%, -50%); }
+  .legs { top: 70%; left: 50%; width: 15%; height: 15%; transform: translate(-50%, -50%); }
+  .arms { top: 40%; left: 25%; width: 8%; height: 8%; transform: translate(-50%, -50%); } 
+  .abs { top: 80%; left: 30%; width: 8%; height: 5%; transform: translate(-50%, -50%); }  */
+  
+  .muscle-info {
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  /* Exercise Pop-up */
+.exercise-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 2rem;
+    box-shadow: 0 -4px 10px rgba(255, 69, 0, 0.3);
+    border-radius: 20px 20px 0 0;
+    animation: slideUp 0.3s ease-in-out;
+    max-height: 60vh;
+    overflow-y: auto;
+    transition: max-height 0.3s;
+  }
+  
+  /* Expand Pop-up when scrolling */
+  .exercise-popup:focus-within {
+    max-height: 100vh;
+  }
+  
+  /* Pop-up Header */
+  .popup-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .popup-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    
+    
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .close-btn:hover {
+    background: red;
+    color: white;
+  }
+  
+  /* Exercise Grid */
+  .exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 items per row */
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Exercise Box */
+  .exercise-box {
+    background: #ff4500;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 400;
+    transition: transform 0.2s;
+  }
+  
+  .exercise-box:hover {
+    transform: scale(1.05);
+  }
+
+
+  /* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .exercise-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .exercise-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 per row on very small screens */
+    }
+}
+  
+  /* Animation */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,205 @@
+/* ========== General Styling ========== */
+.log-workouts {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    background-color: #0a0814;
+  }
+  
+  .container {
+    
+    max-width: 600px;
+    margin: auto;
+  }
+  .log-workouts h2{
+    margin-bottom: 1rem;
+  }
+  
+  /* ========== Calendar Styling ========== */
+  .calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .react-calendar {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.3);
+    width: 800px;
+    
+  }
+  
+  
+   .react-calendar__tile {
+    color: white !important; 
+    font-size: 1rem;
+    
+  }
+  .react-calendar__tile--active {
+    background: #ff4500 !important;
+    color: white !important;
+  }
+
+  
+.react-calendar__tile:hover {
+    background: rgba(255, 69, 0, 0.3) !important;
+    color: white !important;
+  }
+  
+  
+  .react-calendar__tile--disabled {
+    color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  /* Navigation Buttons (Previous/Next Month) */
+  .react-calendar__navigation button {
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation Button Hover Effect */
+  .react-calendar__navigation button:hover {
+    color: #ff4500;
+  }
+  
+  /* ========== Form Styling ========== */
+  .workout-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    font-family: "Outfit", sans-serif;
+    
+  }
+  
+  .workout-form .form-group {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .workout-form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .workout-form .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  /* Weight Input with Toggle */
+   
+  
+  .weight-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  .weightlabeltext{
+    font-weight: 400 !important;
+    margin-top: 1px;
+  }
+  
+  .unit-toggle {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .unit-toggle:hover {
+    background: white;
+    color: #ff4500;
+  }
+
+  /* Question Mark */
+.question-mark {
+    background: white;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+  }
+  
+  /* Tooltip Text */
+  .tooltip-text {
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 0.8rem;
+    padding: 15px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show Tooltip on Hover */
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+
+  .btn {
+    background: #ff4500;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  .btn:hover {
+    background: white;
+    color: #ff4500;
+  }
+  
+  /* ========== Workout Log List ========== */
+  .workout-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .workout-list li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
