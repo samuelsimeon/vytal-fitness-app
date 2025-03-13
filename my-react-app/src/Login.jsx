@@ -22,18 +22,19 @@ function Login({ setUser }) {
     setMessage(""); // Clear previous messages
 
     try {
-      const response = await fetch("https://vytal-fitness-app-qq9j.onrender.com/api/auth/login", {
+      // Retrieve the backend URL from environment variable
+      const backendUrl = import.meta.env.VITE_BACKEND_URL;
+      const response = await fetch(`${backendUrl}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        credentials: "include", // ensures session cookie is sent
+        credentials: "include", // Ensures session cookie is sent
         body: JSON.stringify(formData),
       });
       const data = await response.json();
 
       if (!response.ok) {
-        // If express-validator or other server errors exist
+        // If validation errors exist, combine and show them
         if (data.errors && data.errors.length > 0) {
-          // Combine all error messages into a single string
           const combinedErrors = data.errors.map((err) => err.msg).join(", ");
           setMessage(combinedErrors);
         } else {
@@ -57,8 +58,7 @@ function Login({ setUser }) {
         <div className="login-form">
           <h2>Welcome Back</h2>
           <p>Login to continue your fitness journey</p>
-
-          {/* noValidate prevents built-in HTML5 validation pop-ups */}
+          {/* noValidate disables built-in HTML5 validation pop-ups */}
           <form onSubmit={handleSubmit} noValidate>
             <div className="input-group">
               <input
@@ -82,10 +82,8 @@ function Login({ setUser }) {
               Login
             </button>
           </form>
-
           {/* Display any messages */}
           {message && <p className="message">{message}</p>}
-
           {/* Social Login */}
           <div className="social-login">
             <p>Or login with</p>
@@ -93,7 +91,6 @@ function Login({ setUser }) {
               <img src="/icons/google2.png" alt="Google" />
             </button>
           </div>
-
           {/* Forgot Password & Register Links */}
           <p className="forgot-password">
             <Link to="/forgot-password">Forgot your password?</Link>
@@ -102,16 +99,11 @@ function Login({ setUser }) {
             Don't have an account? <Link to="/register">Sign up</Link>
           </p>
         </div>
-
         {/* Right Side: Branding Image */}
         <div className="login-branding">
           <div className="logo-branding-content">
             <Link to="/">
-              <img
-                src="/images/vytallogoorange.png"
-                alt="Brand Logo"
-                className="home-link"
-              />
+              <img src="/images/vytallogoorange.png" alt="Brand Logo" className="home-link" />
             </Link>
             <h3>Track Improve Dominate</h3>
             <p>Log in to access your workouts, meals, and progress in one place.</p>
