@@ -22,11 +22,10 @@ function Login({ setUser }) {
     setMessage(""); // Clear previous messages
 
     try {
-      const response = await fetch("https://vytal-fitness-app.onrender.com/api/auth/login", {
+      const response = await fetch("https://vytal-fitness-app-qq9j.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        // If you want the server to store session cookies, include credentials:
-         credentials: "include",
+        credentials: "include", // ensures session cookie is sent
         body: JSON.stringify(formData),
       });
       const data = await response.json();
