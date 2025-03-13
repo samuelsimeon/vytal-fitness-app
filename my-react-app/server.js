@@ -35,10 +35,10 @@ db.once("open", () => {
 // Middleware for JSON parsing
 app.use(express.json());
 
-// Configure CORS to allow credentials and set the correct origin to your deployed URL
+// Configure CORS to allow credentials and set the correct origin
 app.use(
   cors({
-    origin: "https://vytal-fitness-app.onrender.com", // This should match your deployed front end URL
+    origin: "http://localhost:5174", // Change this if your client runs on a different URL
     credentials: true,
   })
 );
