@@ -18,7 +18,7 @@ function LogWorkouts() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const res = await fetch("http://localhost:3009/api/logs", {
+        const res = await fetch("https://vytal-fitness-app.onrender.com/api/logs/", {
           credentials: "include", // Ensure the session cookie is sent
         });
         if (!res.ok) {

@@ -14,7 +14,7 @@ function LogMeals() {
   useEffect(() => {
     const fetchMeals = async () => {
       try {
-        const res = await fetch("http://localhost:3009/api/meals", {
+        const res = await fetch("https://vytal-fitness-app.onrender.com/api/meals/", {
           credentials: "include", // Send session cookie
         });
         if (!res.ok) {

@@ -22,7 +22,7 @@ function Login({ setUser }) {
     setMessage(""); // Clear previous messages
 
     try {
-      const response = await fetch("http://localhost:3009/api/auth/login", {
+      const response = await fetch("https://vytal-fitness-app.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // If you want the server to store session cookies, include credentials:
